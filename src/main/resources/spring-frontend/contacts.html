@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Тут название страницы написать</title>
+    <meta name="description" content="Описание страницы">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link href="/favicon.ico" rel="shortcut icon">
+</head>
+<body class="Site">
+
+<div class="ProductCard-cartElement">
+    <a class="btn btn_primary btn_outline" href="#">
+        <span class="btn-content">Написать</span></a>
+</div>
+<div id="myPopup">
+<div class="popup-fade">
+    <div class="popup">
+        <div class="Middle">
+            <div class="Middle-top">
+                <div class="wrap">
+                    <h1 class="Middle-title">Контакты
+                    </h1>
+                </div>
+            </div>
+            <div class="wrap">
+                <main class="Middle-main">
+                    <div class="Contacts">
+                        <div class="row">
+                            <div class="row-block">
+                                <div class="Contacts-form" th:action="@{/getMail}" method="post"
+                                     th:object="${mailForm}">
+                                    <h2>Напишите нам:
+                                    </h2>
+                                    <h3 th:if="${status!=null && status}" style="color: green"
+                                        th:text="Сообщуение успешно доставлено"></h3>
+                                    <h3 th:if="${status!=null && !status}" style="color: red"
+                                        th:text="Сообщуение не доставлено"></h3>
+
+                                    <form class="form" action="#" method="post" th:action="@{/getMail}"
+                                          th:object="${mailForm}">
+                                        <div class="form-group">
+                                            <input class="form-input" id="name" name="name" type="text"
+                                                   placeholder="Введите Имя" th:field="*{name}"
+                                                   data-validate="require"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-input form-input_mail" id="mail" name="mail" type="text"
+                                                   placeholder="Введите e-mail" th:field="*{email}"
+                                                   data-validate="mail require"/>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input class="form-input" id="phone" name="phone" type="text"
+                                                   placeholder="Введите номер" th:field="*{phone}"/>
+                                        </div>
+                                        <div class="form-group">
+                                    <textarea class="form-textarea Contacts-message" name="message" id="message"
+                                              placeholder="Введите сообщение" th:field="*{message}"
+                                              data-validate="require"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn_primary form-btn" type="submit" name="sendMessage"
+                                                    id="sendMessage">Отправить
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+    <span id="myPopup__close" class="close">✖</span>
+</div>
+<div id="myOverlay"></div>
+<script src="/assets/js/MailSendScript.js"></script>
+</body>
+</html>
