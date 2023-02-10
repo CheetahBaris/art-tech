@@ -20,7 +20,6 @@ closePopupButton.addEventListener("click", () => {
 // кнопка отправки сообщения
 
 sendButton.addEventListener("click", (e) => {
-  // e.preventDefault();
 });
 
 document.addEventListener("click", (e) => {

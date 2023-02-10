@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "/assets/css/style.css";
+@import "/client/css/popup.css";
 
 body {
     font-size: 16px;
@@ -19,17 +19,17 @@ p {
     margin: 0 15px;
 }
 .menu {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 40px auto 0 auto;
-	background: #2A363B;
-	color: #FFFFFF;
-	max-width: 830px;
-	width: 100%;
-	min-height: 52px;
-	border-radius: 15px;
-	flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 0 auto;
+    background: #2A363B;
+    color: #FFFFFF;
+    max-width: 830px;
+    width: 100%;
+    min-height: 52px;
+    border-radius: 15px;
+    flex-wrap: wrap;
 }
 .menu a {
     color: #FFFFFF;
@@ -39,16 +39,16 @@ p {
     margin: 0px 35px;
 }
 .logo {
-	font-size: 20px;
-	font-weight: 800;
-	position: relative;
+    font-size: 20px;
+    font-weight: 800;
+    position: relative;
 }
 .logo-toch {
-	color: #FF3E01;
+    color: #FF3E01;
 }
 .logo:after {
-	content: url('/assets/img/logo.png');
-	display: block;
+    content: url('/client/img/logo.png');
+    display: block;
     position: absolute;
     left: 141px;
     top: 0px;
@@ -148,15 +148,14 @@ p {
 }
 .footer-contacts {
     display: flex;
-	/*flex-direction: row;*/
-	justify-content: space-between;
-	align-items: center;
-	background: #2A363B;
-	color: #FFFFFF;
-	border-radius: 15px;
-	width: 73%;
-	margin: 0 13px 0 50px;
-	flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #2A363B;
+    color: #FFFFFF;
+    border-radius: 15px;
+    width: 73%;
+    margin: 0 13px 0 50px;
+    flex-wrap: wrap;
 }
 .footer-item {
     margin: 15px 60px;
@@ -183,10 +182,10 @@ p {
     .items {
         justify-content: center;
     }
-        .menu div {
+    .menu div {
         margin: 20px 25px;
     }
-    
+
 }
 @media screen and (max-width: 436px) {
     .menu {
@@ -198,11 +197,11 @@ p {
     .items {
         justify-content: center;
     }
-    
+
 }
 @media screen and (max-width: 1024px) {
     .menu {
-        justify-content: center;      
+        justify-content: center;
     }
 
     .footer {

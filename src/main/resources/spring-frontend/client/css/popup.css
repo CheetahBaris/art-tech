@@ -1,4 +1,3 @@
-/* Важная часть */
 .popup__bg {
   position: fixed;
   top: 0;
@@ -32,8 +31,7 @@
   transform: translate(-50%, -50%) scale(1);
   transition: 0.5s all;
 }
-/* Конец важной части */
-/* Далее код для стилизации формы */
+
 .popup-btn {
   display: flex;
 }
